@@ -1,0 +1,140 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.section {
+  padding: 100px 0;
+  background-color: #f8fafc;
+}
+
+.title {
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 6.5px;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  background-color: #ffc75f;
+  height: 5px;
+  bottom: -8px;
+  left: 0;
+  margin: 0 25%;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 50px 0;
+}
+
+.categories .btn {
+  background-color: #fdbc02;
+  padding: 8px 15px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.categories .btn:hover {
+  background-color: #ffc75f;
+}
+
+.menu {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 32px;
+  justify-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .menu {
+    width: 95vw;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media screen and (min-width: 992px) {
+  .item {
+    max-width: 100%;
+  }
+}
+
+.item img {
+  width: 100%;
+  height: 240px;
+  display: block;
+  object-fit: cover;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.item-info {
+  padding: 20px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.item-header > h2 {
+  text-transform: capitalize;
+  color: #444242;
+}
+
+.item-header span {
+  background-color: #fdbc02;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.item-info .item-text {
+  line-height: 27px;
+  color: #514f4f;
+}
